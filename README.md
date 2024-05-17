@@ -8,11 +8,13 @@ We modify exisitng `bitcoind` from [Bitcoin Core](https://github.com/bitcoin/bit
 
 Follow [Building section of Bitcoin doc](https://github.com/bitcoin/bitcoin/blob/master/doc/README.md#building) after modifying following codes
 
+Example modified codes of Bitcoin 27.0 can be found in [example](/example/)
+
 ### Increase maximum outbound peers
 
 We will add peers to the supernode manually via Bitcoin RPC `ADDNODE` command, so upper limit of manually added peers should be increased.
 
-This can be set via `MAX_ADDNODE_CONNECTIONS` in `src/net.h`
+This can be set via changing `MAX_ADDNODE_CONNECTIONS` in `src/net.h`
 
 ```
 /** Maximum number of addnode outgoing nodes */
